@@ -1,0 +1,62 @@
+/* Page Changer */
+.stickyPages {
+  position: sticky;
+  top: 10rem;
+  left: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  z-index: 10;
+  height: 0;
+}
+
+.stickyContent {
+  background-color: #eedc82;
+  border-radius: 2rem;
+  font-size: 3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.pageChanger {
+  position: absolute;
+  top: 0;
+  left: 6rem;
+  background-color: #eedc82;
+  visibility: hidden;
+  transition: visibility 1s 0.2s;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10%;
+}
+
+.stickyPages:hover > .pageChanger {
+  visibility: visible;
+}
+
+.stickyPages:active > .pageChanger {
+  visibility: visible;
+}
+
+/* Arrow */
+.arrowCircle {
+  border-radius: 50%;
+  background-color: black;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.arrowUp {
+  transform: rotate(90deg);
+}
+.arrowDown {
+  transform: rotate(-90deg);
+}

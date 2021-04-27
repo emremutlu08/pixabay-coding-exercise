@@ -1,0 +1,50 @@
+.main {
+  margin: 2rem 4rem;
+  height: max-content;
+}
+
+/* First the Grid */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* The Images */
+a {
+  transition: opacity 0.25s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, 33.3%);
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .galleryGrid {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .galleryGrid {
+    grid-template-columns: repeat(5, 20%);
+  }
+}

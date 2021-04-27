@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-base-webkit-scrollbar-track: #808080;
+  --color-base-webkit-scrollbar-thumb: #b2b2b2;
+  --color-base-webkit-scrollbar-thumb-hover: #d8d8d8;
+}
+
+/* For Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-base-webkit-scrollbar-track);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-base-webkit-scrollbar-thumb);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-base-webkit-scrollbar-thumb-hover);
+}
+
+/* Manipulated rem size to use it effectively */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+  font-family: "Lato", sans-serif;
+}
+
+@media only screen and (min-width: 1921px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
