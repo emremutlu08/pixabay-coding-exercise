@@ -20,7 +20,6 @@ const Main = () => {
     const res = await api.get("", {
       params: { q, image_type: "image", page },
     });
-    console.log(res);
     return res;
   };
 

@@ -1,0 +1,53 @@
+.informations {
+  font-size: 60%;
+  text-align: center;
+  width: 100%;
+  background-color: #fce8a2ec;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 2rem;
+}
+.centeralized {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 2rem;
+}
+.userImage {
+  max-width: 20%;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .informations {
+    grid-template-columns: repeat(2, 50%);
+    font-size: 70%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .informations {
+    grid-template-columns: repeat(3, 33.3%);
+
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .informations {
+    grid-template-columns: repeat(4, 25%);
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .informations {
+    grid-template-columns: repeat(5, 20%);
+
+    font-size: 100%;
+  }
+}

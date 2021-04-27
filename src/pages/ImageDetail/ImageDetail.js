@@ -4,17 +4,12 @@ import React from "react";
 /* Styles */
 import classes from "./ImageDetail.module.css";
 
-/* Icons */
-import {
-  FaCloudDownloadAlt,
-  FaEye,
-  FaTag,
-  FaSave,
-  FaImage,
-} from "react-icons/fa";
+/* Imports */
+import ImageInformations from "../../components/imageInformations/imageInformations";
+
+/* This is the image detail page */
 
 const ImageDetail = (props) => {
-  console.log(props);
   const data = props.location.state;
   return (
     <div className={classes.container}>
@@ -24,33 +19,7 @@ const ImageDetail = (props) => {
         alt={data.tags}
         className={classes.mainImage}
       />
-      <div className={classes.informations}>
-        <div className={classes.centeralized}>
-          <img
-            src={data.userImageURL}
-            alt={data.user}
-            className={classes.userImage}
-          />{" "}
-          {data.user}
-        </div>
-        <div className={classes.centeralized}>
-          <FaTag />
-          {data.tags}
-        </div>
-        <div className={classes.centeralized}>
-          <FaEye /> {data.views}
-        </div>
-        <div className={classes.centeralized}>
-          {" "}
-          <FaCloudDownloadAlt /> {data.downloads}
-        </div>
-        <div className={classes.centeralized}>
-          <FaImage /> {data.imageHeight} x {data.imageWidth}
-        </div>
-        <div className={classes.centeralized}>
-          <FaSave /> {Number(data.imageSize / 1000000).toFixed(2)} MB
-        </div>
-      </div>
+      <ImageInformations data={data} />
     </div>
   );
 };
